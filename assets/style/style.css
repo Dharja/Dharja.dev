@@ -1,18 +1,4 @@
-.navbar {
-  position: fixed;
-  top: 10;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 50px;
-  margin-top: 20px;
-  margin-left: 20px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  z-index: 1000;
-  background-color: transparent !important;
-}
+
 * { box-sizing: border-box;}
 html {
   min-height: 100%;
@@ -24,83 +10,48 @@ html {
   --font-m: 24px;
   --font-l: 56px;
 
-  --text: #222222;
-  --text-medium: #555555;
+  --text: #120e17;
+  --text-medium: #867d8b;
+  --black: #331D2C;
+  --black-light: #3F2E3E;
+  --violet: #9e7090;
+  --violet-light:#f1ebe4;
 
   --spacing-xs: 8px;
   --spacing-s: 12px;
   --spacing-m: 24px;
   --spacing-l: 48px;
-  --spacing-xl: 64px;
+  --spacing-xl: 40px;
 
   --direction: row;
-  --accent: lavender;
-
-}
-body {
-  background: #F8F9F9;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: var(--text);
-  font-family: var(--sans-serif);
-  font-size: var(--font-s);
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: 1.2em;
-  overflow-y: scroll;
-  margin: 0;
-  padding: 0;
 }
 
-section.accent {
-  background: var(--accent);
-  color: black;
-}
-header, .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: var(--spacing-xl);
-  padding-right: var(--spacing-xl);
-}
-.content {
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
-}
 
-h3 {
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-  font-family: var(--sans-serif);
-  font-style: normal;
-  line-height: 1.6em;
-  font-size: var(--font-xs);
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  letter-spacing: .06em;
-  color: var(--text);
-}
-
-a:link, a:visited {
-  text-decoration: none;
-  color: black;
-}
-p > a:link, p > a:visited {
-  border-bottom: 3px solid black;
-}
-
-a:hover {
-  color: var(--text);
-  fill: var(--text);
-}
-
-.horizontal {
+/****** NAVBAR ******/
+.nav{
+  position: fixed;
+  top: 10;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  z-index: auto;
+  background-color: transparent !important;
+  flex-direction: row-reverse;
 }
+
+.logoNav {
+  align-items: start;
+  display: flex;
+  flex-direction: var(--direction);
+  height: 60px;
+}
+
 header, .content {
   display: flex;
   flex-direction: var(--direction);
@@ -123,7 +74,7 @@ nav {
 nav > a:link, nav > a:visited {
   text-decoration: none;
   padding: var(--spacing-s);
-  color: black;
+  color: var(--text);
   text-transform: uppercase;
   font-size: var(--font-xs);
   border-bottom: 3px solid transparent;
@@ -131,6 +82,146 @@ nav > a:link, nav > a:visited {
 nav > a:hover {
   border-bottom: 3px solid black;
 }
+
+
+body {
+  background: var(--violet-light);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: var(--text);
+  font-family: var(--sans-serif);
+  font-size: var(--font-s);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.2em;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 1em;
+}
+
+section.accent {
+  background: var(--violet-light);
+  color: var(--text);
+}
+header, .content {
+  display: flex;
+  flex-direction: var(--direction);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+}
+.content {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+.contenttwo{
+  padding: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  p{
+    text-align: justify;
+    margin: 70px;
+  }
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-family: var(--sans-serif);
+  font-style: normal;
+  line-height: 1.6em;
+  font-size: var(--font-xs);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: .06em;
+  color: var(--text);
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: var(--text);
+}
+p > a:link, p > a:visited {
+  border-bottom: 3px solid var(--black);
+}
+
+a:hover {
+  color: var(--text);
+  fill: var(--text);
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secHome{
+  
+  justify-content: center;
+  border-radius: 7px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  max-height: 900px;
+  background: rgb(252,248,239);
+  background: linear-gradient(146deg, rgba(252,248,239,1) 20%, rgba(230,189,135,1) 39%, rgba(221,149,199,1) 55%, rgba(213,161,215,1) 76%);
+}
+
+.titleHome{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 50px; ;
+  flex-direction: var(--direction);
+  justify-content:center;
+  align-items: flex-end;
+  max-width: 1400px;
+}
+
+@font-face{
+  font-family: 'Bumerang';
+  src: url('/assets/style/BumerangDemoVersionRegular-nRwZY.otf');
+  font-weight:lighter;
+}
+
+.h1{
+  font-family: 'Bumerang';
+  font-size: 100px;
+  font-weight: 200;
+  color: var(--text);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.h3{
+  font-size: var(--font-m);
+  color: var(--text);
+  text-align:left;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+}
+
+.randomImage {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+
 footer {
   font-size: var(--spacing-s);
   max-width: 600px;
@@ -192,11 +283,6 @@ svg {
   object-fit: contain;
 }
 
-video {
-  height: 80vh;
-  max-width: 100%;
-}
-
 .line {
   border-top: 3px solid #000;
   padding: 20px 0px 20px 0px;
@@ -206,7 +292,7 @@ video {
   padding: 20px 0px 20px 0px;
 }
 .line.blurb {
-  background: var(--accent);
+  background: var(--violet-light);
   border-left: 3px solid black;
   border-right: 3px solid black;
 }
@@ -223,10 +309,7 @@ video {
   line-height: 1em;
   font-weight: bold;
 }
-.blurb {
-  padding: 40px;
-  font-weight: bold;
-}
+
 .section-title {
   font-weight: bold;
   font-size: 1.7em;
@@ -236,6 +319,11 @@ video {
   margin-top: 100px;
   font-weight: bold;
 }
+
+
+
+
+/********* Media Queries *********/
 
 @media only screen and (max-width: 860px) {
   .wrapper {
@@ -281,8 +369,6 @@ video {
   .line.blurb + div {
     border-top: none !important;
   }
-  
-  
 }
 
 @media only screen and (max-width: 750px) {
