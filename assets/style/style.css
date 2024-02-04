@@ -49,20 +49,15 @@ html {
   align-items: start;
   display: flex;
   flex-direction: var(--direction);
-  height: 60px;
+  height: 70px;
 }
 
-header, .content {
-  display: flex;
-  flex-direction: var(--direction);
-  justify-content: space-between;
-  align-items: center;
-}
 .header-title {
   color: var(--text) !important;
   font-size: var(--font-m);
   font-weight: 800;
 }
+
 nav {
   font-family: var(--sans-serif);
   display: flex;
@@ -100,10 +95,6 @@ body {
   padding: 1em;
 }
 
-section.accent {
-  background: var(--violet-light);
-  color: var(--text);
-}
 header, .content {
   display: flex;
   flex-direction: var(--direction);
@@ -114,6 +105,7 @@ header, .content {
   padding-left: var(--spacing-xl);
   padding-right: var(--spacing-xl);
 }
+
 .content {
   padding-top: var(--spacing-xl);
   padding-bottom: var(--spacing-xl);
@@ -166,25 +158,41 @@ a:hover {
 }
 
 .secHome{
-  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
-  border-radius: 7px;
   align-items: center;
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 0;
+  max-width: 100%;
   max-height: 900px;
-  background: rgb(252,248,239);
-  background: linear-gradient(146deg, rgba(252,248,239,1) 20%, rgba(230,189,135,1) 39%, rgba(221,149,199,1) 55%, rgba(213,161,215,1) 76%);
+}
+
+.me{
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .titleHome{
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  padding-top: 50px; ;
+  grid-template-rows: 1fr 2fr;
+  padding-top: 20px;
+  padding-bottom: 50px;
   flex-direction: var(--direction);
   justify-content:center;
   align-items: flex-end;
   max-width: 1400px;
+}
+
+.textHomeAbout{
+  display: grid;
+  color: var(--text);
+  align-items: flex-start;
+  text-align:end;
+
+  font-size: var(--font-s);
+  margin: 0;
+  padding-right: 30px;
 }
 
 @font-face{
@@ -212,13 +220,10 @@ a:hover {
   font-weight: lighter;
 }
 
-.randomImage {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
+.backgroundFlower {
+  position: fixed;
+  height: 500px;
+  z-index: -1;
 }
 
 
