@@ -11,10 +11,10 @@ html {
   --font-l: 56px;
 
   --text: #120e17;
-  --text-medium: #867d8b;
+  --text-medium: #bdaa98;
   --black: #331D2C;
-  --black-light: #3F2E3E;
-  --violet: #9e7090;
+  --black-light: #3e333b;
+  --violet: #aa888d;
   --violet-light:#f1ebe4;
 
   --spacing-xs: 8px;
@@ -118,7 +118,7 @@ header, .content {
 
   p{
     text-align: justify;
-    margin: 70px;
+    margin: 100px;
   }
 }
 
@@ -166,6 +166,8 @@ a:hover {
   margin: 0;
   max-width: 100%;
   max-height: 900px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .me{
@@ -175,13 +177,16 @@ a:hover {
 
 .titleHome{
   display: grid;
-  grid-template-rows: 1fr 2fr;
   padding-top: 20px;
   padding-bottom: 50px;
   flex-direction: var(--direction);
   justify-content:center;
   align-items: flex-end;
   max-width: 1400px;
+}
+
+.titleHome h3{
+  padding-bottom: 50px;
 }
 
 .textHomeAbout{
@@ -196,15 +201,15 @@ a:hover {
 }
 
 @font-face{
-  font-family: 'Bumerang';
-  src: url('/assets/style/BumerangDemoVersionRegular-nRwZY.otf');
+  font-family: 'Eu Alonira Personal Use';
+  src: url('/assets/style/EuAloniraPersonalUse-2Oe9e.ttf');
   font-weight:lighter;
 }
 
 .h1{
-  font-family: 'Bumerang';
+  font-family: 'Eu Alonira Personal Use';
   font-size: 100px;
-  font-weight: 200;
+  font-weight: lighter;
   color: var(--text);
   text-align: left;
   margin: 0;
@@ -325,7 +330,24 @@ svg {
   font-weight: bold;
 }
 
+button{
+  position: relative;
+  display: inline-block;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  background: var(--violet);
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-s);
+  font-family: 'Eu Alonira Personal Use';
+  border-radius: 50px;
+}
 
+button:hover{
+  background: var(--text-medium);
+}
 
 
 /********* Media Queries *********/
