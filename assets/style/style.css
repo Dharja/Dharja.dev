@@ -193,11 +193,9 @@ a:hover {
   display: grid;
   color: var(--text);
   align-items: flex-start;
-  text-align:end;
-
-  font-size: var(--font-s);
+  text-align: left;
+  font-size: var(--font-xs);
   margin: 0;
-  padding-right: 30px;
 }
 
 @font-face{
@@ -241,6 +239,14 @@ footer {
   margin-right: auto;
   padding: var(--spacing-m) ;
   color: var(--text-medium);
+}
+
+.nav-line {
+  width: 30px;
+  height: 1px;
+  background-color: #1a1818;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 img.logo {
